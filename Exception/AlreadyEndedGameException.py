@@ -1,0 +1,2 @@
+class AlreadyEndedGameException(Exception):
+    pass

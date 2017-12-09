@@ -1,0 +1,22 @@
+from App.Game import Game
+
+
+def main():
+
+    while True:
+        action = raw_input("\nPlease select an option:\n\n"
+                           "\t[P] Play\n"
+                           "\t[Q] Quit\n"
+                           "\nOption: ").upper()
+        if action not in "PQ" or len(action) != 1:
+            print("I don't know how to do that")
+            continue
+        if action == 'P':
+            game = Game(3)
+            game.play()
+        elif action == 'Q':
+            quit()
+
+
+if __name__ == '__main__':
+    main()
